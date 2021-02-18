@@ -77,7 +77,7 @@
     self.nationalNumber = [coder decodeObjectForKey:@"nationalNumber"];
     self.extension = [coder decodeObjectForKey:@"extension"];
     self.italianLeadingZero = [[coder decodeObjectForKey:@"italianLeadingZero"] boolValue];
-    self.numberOfLeadingZeros = [coder decodeObjectForKey:@"numberOfLeadingZeros"];
+    self.numberOfLeadingZeros = [coder decodeObjectForKey:@"numberOfLeadingZeros"] ?: @1;
     self.rawInput = [coder decodeObjectForKey:@"rawInput"];
     self.countryCodeSource = [coder decodeObjectForKey:@"countryCodeSource"];
     self.preferredDomesticCarrierCode = [coder decodeObjectForKey:@"preferredDomesticCarrierCode"];
