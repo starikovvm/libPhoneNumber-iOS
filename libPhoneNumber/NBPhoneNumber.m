@@ -48,12 +48,12 @@
   }
 
   NBPhoneNumber *other = object;
-  return ([self.countryCode isEqualToNumber:other.countryCode]) &&
-         ([self.nationalNumber isEqualToNumber:other.nationalNumber]) &&
+  return ([self.countryCode isEqual:other.countryCode]) &&
+         ([self.nationalNumber isEqual:other.nationalNumber]) &&
          (self.italianLeadingZero == other.italianLeadingZero) &&
-         ([self.numberOfLeadingZeros isEqualToNumber:other.numberOfLeadingZeros]) &&
+         ([self.numberOfLeadingZeros isEqual:other.numberOfLeadingZeros]) &&
          ((self.extension == nil && other.extension == nil) ||
-          [self.extension isEqualToString:other.extension]);
+          [self.extension isEqual:other.extension]);
 }
 
 - (id)copyWithZone:(NSZone *)zone {
